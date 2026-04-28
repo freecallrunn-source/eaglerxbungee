@@ -3,7 +3,7 @@ import { Config } from "./types.js";
 export const config: Config = {
     name: "BasedProxy",
     bindHost: "0.0.0.0",
-    bindPort: 80, // 443 if using TLS
+    bindPort: Number(process.env.PORT) || 10000,
     maxPlayers: 20,
     motd: {
         iconURL: null,
@@ -11,8 +11,8 @@ export const config: Config = {
         l2: "lol"
     },
     server: {
-        host: "locahost",
-        port: 25565
+        host: "unnamed18889.aternos.me",
+        port: 34621
     },
     security: { // provide path to key & cert if you want to enable encryption/secure websockets
         enabled: false,
